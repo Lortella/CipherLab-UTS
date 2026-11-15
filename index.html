@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b1020">
+  <meta name="description" content="CipherLab adalah media belajar interaktif untuk memahami algoritma kriptografi klasik.">
+  <title>CipherLab — Studio Sandi Klasik</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <canvas id="matrix-bg" aria-hidden="true"></canvas>
+
+  <aside class="sidebar" id="sidebar">
+    <a class="brand" href="#" data-page="dashboard">
+      <span class="brand-mark">C.</span>
+      <span class="brand-copy"><strong>CipherLab</strong><small>KRIPTOGRAFI KLASIK</small></span>
+    </a>
+
+    <div class="side-label">MENU UTAMA</div>
+    <nav class="nav-list" aria-label="Navigasi utama">
+      <button class="nav-item active" data-page="dashboard"><span class="nav-icon">⌂</span> Dasbor</button>
+      <button class="nav-item" data-page="laboratory"><span class="nav-icon">⌘</span> Laboratorium Sandi</button>
+      <button class="nav-item" data-page="algorithms"><span class="nav-icon">▦</span> Daftar Algoritma</button>
+      <button class="nav-item" data-page="history"><span class="nav-icon">◷</span> Riwayat Proses</button>
+    </nav>
+
+    <div class="side-label side-label-info">LAINNYA</div>
+    <nav class="nav-list" aria-label="Informasi aplikasi">
+      <button class="nav-item" data-page="about"><span class="nav-icon">ⓘ</span> Tentang Aplikasi</button>
+    </nav>
+
+    <div class="sidebar-bottom">
+      <div class="status-card">
+        <span class="status-dot"></span>
+        <div><strong>Sistem siap digunakan</strong><small>Semua algoritma tersedia</small></div>
+      </div>
+      <div class="sidebar-version">CIPHERLAB <span>VERSI 1.0</span></div>
+    </div>
+  </aside>
+
+  <main class="main-area">
+    <header class="topbar">
+      <button class="icon-button mobile-menu" id="menuToggle" aria-label="Buka menu">☰</button>
+      <div class="breadcrumb"><span>Ruang Kerja</span><b>/</b><strong id="pageTitle">Dasbor</strong></div>
+      <div class="top-actions">
+        <span class="top-status"><i></i> BERJALAN DI PERANGKAT INI</span>
+        <button class="icon-button" id="themeToggle" aria-label="Ganti tema">☼</button>
+      </div>
+    </header>
+
+    <div class="content">
+      <section class="page active" id="page-dashboard">
+        <div class="hero">
+          <div class="hero-copy">
+            <div class="eyebrow"><span></span> MEDIA BELAJAR KRIPTOGRAFI KLASIK</div>
+            <h1>Pahami cara kerja<br><em>pesan rahasia.</em></h1>
+            <p>Kenali cara pesan diubah menjadi kode, lalu kembalikan lagi ke bentuk aslinya. Semuanya bisa dicoba langsung lewat enam algoritma kriptografi klasik.</p>
+            <div class="hero-actions">
+              <button class="btn btn-primary" data-go="laboratory">Mulai Mencoba <span>↗</span></button>
+              <button class="btn btn-quiet" data-go="algorithms">Lihat Algoritma</button>
+            </div>
+          </div>
+          <div class="hero-visualizer" aria-hidden="true">
+            <div class="visualizer-glow"></div>
+            <span style="--i:0"></span>
+<span style="--i:1"></span>
+<span style="--i:2"></span>
+<span style="--i:3"></span>
+<span style="--i:4"></span>
+<span style="--i:5"></span>
+<span style="--i:6"></span>
+<span style="--i:7"></span>
+<span style="--i:8"></span>
+<span style="--i:9"></span>
+<span style="--i:10"></span>
+<span style="--i:11"></span>
+<span style="--i:12"></span>
+<span style="--i:13"></span>
+<span style="--i:14"></span>
+<span style="--i:15"></span>
+<span style="--i:16"></span>
+<span style="--i:17"></span>
+<span style="--i:18"></span>
+<span style="--i:19"></span>
+<span style="--i:20"></span>
+<span style="--i:21"></span>
+<span style="--i:22"></span>
+<span style="--i:23"></span>
+<span style="--i:24"></span>
+<span style="--i:25"></span>
+<span style="--i:26"></span>
+<span style="--i:27"></span>
+<span style="--i:28"></span>
+<span style="--i:29"></span>
+<span style="--i:30"></span>
+<span style="--i:31"></span>
+<span style="--i:32"></span>
+<span style="--i:33"></span>
+<span style="--i:34"></span>
+<span style="--i:35"></span>
+          </div>
+        </div>
+
+        <div class="section-heading">
+          <div><div class="eyebrow">RINGKASAN</div><h2>Isi ruang kerja</h2></div>
+          <span class="muted">ALFABET A–Z</span>
+        </div>
+        <div class="stats-grid">
+          <article class="stat-card"><div class="stat-top"><span>Algoritma tersedia</span><span class="stat-icon">▦</span></div><strong>06</strong><small>Teknik substitusi dan transposisi</small></article>
+          <article class="stat-card"><div class="stat-top"><span>Jenis proses</span><span class="stat-icon">⇄</span></div><strong>02</strong><small>Enkripsi dan dekripsi</small></article>
+          <article class="stat-card"><div class="stat-top"><span>Penyimpanan</span><span class="stat-icon">⌁</span></div><strong>LOKAL</strong><small>Riwayat tersimpan di browser ini</small></article>
+        </div>
+
+        <div class="section-heading compact">
+          <div><div class="eyebrow">MULAI DARI SINI</div><h2>Pilih algoritma yang ingin dicoba</h2></div>
+          <button class="text-link" data-go="algorithms">Lihat semua algoritma ↗</button>
+        </div>
+        <div class="algorithm-grid" id="dashboardAlgorithms"></div>
+      </section>
+
+      <section class="page" id="page-laboratory">
+        <div class="page-intro"><div class="eyebrow">RUANG PRAKTIK</div><h1>Laboratorium <em>Sandi</em></h1><p>Pilih algoritma, masukkan pesan dan kuncinya, lalu lihat hasil enkripsi atau dekripsinya.</p></div>
+        <div class="lab-layout">
+          <div class="panel lab-panel">
+            <div class="panel-heading"><div><span class="panel-kicker">01 / PENGATURAN</span><h3>Atur proses</h3></div><span class="live-pill"><i></i> SIAP</span></div>
+            <label class="field-label" for="algorithmSelect">Pilih algoritma</label>
+            <select id="algorithmSelect" class="control">
+              <option value="caesar">Caesar Cipher</option>
+              <option value="vigenere">Vigenère Cipher</option>
+              <option value="atbash">Atbash Cipher</option>
+              <option value="affine">Affine Cipher</option>
+              <option value="railfence">Rail Fence Cipher</option>
+              <option value="columnar">Columnar Transposition</option>
+            </select>
+            <div class="algorithm-hint" id="algorithmHint"></div>
+            <div class="key-fields" id="keyFields"></div>
+            <div class="field-row">
+              <label class="field-label">Pilih proses</label>
+              <div class="segmented" id="operationSegment">
+                <button class="selected" data-operation="encrypt">Enkripsi</button>
+                <button data-operation="decrypt">Dekripsi</button>
+              </div>
+            </div>
+            <div class="field-row checkbox-row"><label><input type="checkbox" id="preserveCase" checked> Pertahankan huruf besar/kecil</label><span class="muted tiny">Tanda baca dan spasi tetap ada</span></div>
+            <button class="btn btn-primary run-button" id="runCipher">Jalankan Enkripsi <span>→</span></button>
+            <button class="btn btn-outline run-button" id="clearLab">Bersihkan kolom</button>
+          </div>
+
+          <div class="work-column">
+            <div class="panel input-panel">
+              <div class="panel-heading"><div><span class="panel-kicker">02 / PESAN ASLI</span><h3>Teks yang akan diproses</h3></div><button class="text-link" id="loadExample">Pakai contoh ↗</button></div>
+              <textarea id="sourceText" class="message-input" placeholder="Tulis atau tempel pesan kamu di sini..." spellcheck="false"></textarea>
+              <div class="input-footer"><span id="charCount">0 karakter</span><span>Huruf yang diproses: A–Z</span></div>
+            </div>
+            <div class="result-panel" id="resultPanel">
+              <div class="result-top"><div><span class="panel-kicker">03 / HASIL PROSES</span><h3>Hasil</h3></div><span class="result-placeholder" id="resultStatus">MENUNGGU MASUKAN</span></div>
+              <div class="result-text" id="resultText">Hasil proses akan muncul di sini.</div>
+              <div class="result-footer"><span id="resultMeta">Belum ada proses yang dijalankan</span><button class="btn btn-small btn-outline" id="copyResult" disabled>Salin hasil ⧉</button></div>
+            </div>
+            <div class="panel explanation-panel"><div class="panel-heading"><div><span class="panel-kicker">PENJELASAN SINGKAT</span><h3>Cara kerja algoritma</h3></div></div><p id="cipherExplanation">Pilih algoritma untuk melihat rumus dan cara kerjanya.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="page" id="page-algorithms">
+        <div class="page-intro"><div class="eyebrow">BAHAN BELAJAR</div><h1>Daftar <em>algoritma sandi</em></h1><p>Di sini ada ringkasan, rumus, dan contoh hitungan dari setiap algoritma yang tersedia.</p></div>
+        <div class="filter-row">
+          <div class="filter-tabs" id="algorithmFilters">
+            <button class="selected" data-filter="all">Semua <span>6</span></button>
+            <button data-filter="substitusi">Substitusi <span>4</span></button>
+            <button data-filter="transposisi">Transposisi <span>2</span></button>
+          </div>
+        </div>
+        <div class="algorithm-grid library-grid" id="algorithmLibrary"></div>
+        <div id="algorithmDetails" class="algorithm-details"></div>
+      </section>
+
+      <section class="page" id="page-history">
+        <div class="page-intro history-intro"><div><div class="eyebrow">CATATAN AKTIVITAS</div><h1>Riwayat <em>proses</em></h1><p>Semua proses yang kamu jalankan tersimpan di peramban ini.</p></div><button class="btn btn-outline" id="clearHistory">Hapus Semua Riwayat</button></div>
+        <div class="panel history-panel"><div class="history-head"><span>PROSES</span><span>ALGORITMA</span><span>PESAN / HASIL</span><span>WAKTU</span></div><div id="historyList"></div></div>
+        <p class="muted tiny history-note">Riwayat hanya tersimpan di peramban dan perangkat ini. Menghapus data situs juga akan menghapus riwayatnya.</p>
+      </section>
+
+      <section class="page" id="page-about">
+        <div class="page-intro"><div class="eyebrow">TENTANG PROYEK</div><h1>Tentang <em>CipherLab</em></h1><p>Media belajar sederhana untuk mengenal cara kerja kriptografi klasik.</p></div>
+        <div class="about-grid">
+          <div class="panel identity-panel">
+            <span class="panel-kicker">IDENTITAS PENYUSUN</span>
+            <h2>Krisna Wibowo</h2>
+            <div class="identity-line"><span>Universitas</span><strong>Tanri Abeng University</strong></div>
+            <div class="identity-line"><span>NIM</span><strong>06024010</strong></div>
+            <div class="identity-line"><span>Program Studi</span><strong>Teknik Informatika</strong></div>
+          </div>
+          <div class="panel about-main">
+            <span class="panel-kicker">TENTANG APLIKASI</span>
+            <h2>Belajar kriptografi, sambil <em>langsung mencoba.</em></h2>
+            <p>CipherLab dibuat sebagai media pembelajaran untuk memahami enam algoritma kriptografi klasik. Kamu bisa memasukkan pesan sendiri, menentukan kunci, lalu melihat bagaimana pesan berubah saat dienkripsi dan kembali seperti semula saat didekripsi.</p>
+            <p>Aplikasi ini berjalan langsung di browser. Pesan yang kamu masukkan tidak dikirim ke server. Riwayat proses tersimpan di browser ini menggunakan LocalStorage.</p>
+            <div class="about-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>OOP</span></div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <footer class="footer"><span>© 2026 CIPHERLAB</span><span>MEDIA PEMBELAJARAN KRIPTOGRAFI KLASIK</span></footer>
+  </main>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="assets/js/cipher.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
