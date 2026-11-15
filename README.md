@@ -14,15 +14,25 @@ Proyek ini dibuat sebagai bagian dari **Tugas Ujian Tengah Semester (UTS) Cyber 
 
 ## Pratinjau Aplikasi
 
-<p align="center">
-  <img src="assets/images/preview.gif" alt="Pratinjau dasbor aplikasi CipherLab" width="900">
-</p>
+Berikut beberapa tampilan CipherLab saat digunakan.
+
+### Dasbor
 
 <p align="center">
-  <em>Tampilan dasbor CipherLab.</em>
+  <img src="assets/images/preview.gif" alt="Pratinjau dasbor CipherLab" width="900">
 </p>
 
-> Catatan: berkas pratinjau saat ini berupa satu frame (gambar statis) dalam format GIF, bukan rekaman animasi beberapa frame.
+### Daftar Algoritma
+
+<p align="center">
+  <img src="assets/images/preview-algoritma.gif" alt="Pratinjau halaman daftar enam algoritma CipherLab" width="900">
+</p>
+
+### Laboratorium Sandi
+
+<p align="center">
+  <img src="assets/images/preview-enkripsi.gif" alt="Pratinjau laboratorium enkripsi dan dekripsi CipherLab" width="900">
+</p>
 
 ## Tentang Proyek
 
@@ -287,7 +297,9 @@ CipherLab-UTS/
 │   │   ├── app.js
 │   │   └── cipher.js
 │   └── images/
-│       └── cipherlab-preview.gif
+│       ├── preview.gif
+│       ├── preview-algoritma.gif
+│       └── preview-enkripsi.gif
 └── tests/
     └── uji-algoritma.js
 ```
@@ -298,7 +310,9 @@ CipherLab-UTS/
 - `cipher.js` berisi implementasi enam algoritma menggunakan JavaScript Class.
 - `app.js` mengatur navigasi, interaksi, proses enkripsi/dekripsi, dan riwayat.
 - `uji-algoritma.js` digunakan untuk menguji hasil enkripsi dan dekripsi.
-- `cipherlab-preview.gif` merupakan gambar pratinjau antarmuka untuk README.
+- `preview.gif` menampilkan pratinjau dasbor.
+- `preview-algoritma.gif` menampilkan halaman daftar algoritma.
+- `preview-enkripsi.gif` menampilkan laboratorium enkripsi dan dekripsi.
 
 ## Cara Menjalankan
 
