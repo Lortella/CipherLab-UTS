@@ -15,7 +15,7 @@ Proyek ini dibuat sebagai bagian dari **Tugas Ujian Tengah Semester (UTS) Cyber 
 ## Pratinjau Aplikasi
 
 <p align="center">
-  <img src="assets/images/cipherlab-preview.gif" alt="Pratinjau dasbor aplikasi CipherLab" width="900">
+  <img src="assets/images/preview.gif" alt="Pratinjau dasbor aplikasi CipherLab" width="900">
 </p>
 
 <p align="center">
