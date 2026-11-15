@@ -33,3 +33,12 @@ CipherLab adalah media belajar berbasis HTML, CSS, dan JavaScript untuk mencoba 
 
 ## Catatan
 Algoritma klasik tidak dirancang untuk keamanan digital masa sekarang. Gunakan CipherLab untuk belajar dan latihan, bukan untuk menyimpan atau mengirim informasi rahasia.
+
+
+## Pembuka sinematik
+Saat `index.html` dibuka atau dimuat ulang, aplikasi menampilkan intro sinematik singkat. Intro berisi animasi panel yang masuk dari kiri, efek glitch dan garis pemindai, terminal yang menampilkan proses persiapan, serta identitas penyusun:
+- Made By Krisna Wibowo
+- Tanri Abeng University
+- Tugas UTS Cyber Security
+
+Intro akan beralih otomatis ke dasbor setelah beberapa detik. Tombol **Lewati Intro** atau **Masuk ke CipherLab** dapat digunakan untuk melewatinya lebih cepat. Tidak ada suara yang diputar otomatis.

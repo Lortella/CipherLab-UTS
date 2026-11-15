@@ -504,3 +504,38 @@
   document.addEventListener("visibilitychange", () => document.hidden ? stop() : start());
   reducedMotion.addEventListener?.("change", () => reducedMotion.matches ? stop() : start());
 })();
+
+
+/* Intro sinematik ditampilkan setiap kali website dibuka atau dimuat ulang. */
+(function cinematicIntro() {
+  const intro = document.getElementById("cinematicIntro");
+  if (!intro) return;
+
+  document.body.classList.add("intro-active");
+
+  let isClosing = false;
+  let autoCloseTimer;
+
+  function closeIntro() {
+    if (isClosing) return;
+    isClosing = true;
+    window.clearTimeout(autoCloseTimer);
+    intro.classList.add("is-exiting");
+    document.body.classList.remove("intro-active");
+
+    window.setTimeout(() => {
+      intro.remove();
+    }, 1050);
+  }
+
+  intro.querySelectorAll("[data-close-intro]").forEach(button => {
+    button.addEventListener("click", closeIntro);
+  });
+
+  requestAnimationFrame(() => {
+    intro.classList.add("is-ready");
+  });
+
+  const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  autoCloseTimer = window.setTimeout(closeIntro, prefersReducedMotion ? 900 : 6900);
+})();
